@@ -7,7 +7,7 @@ const Layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className={cn(styles["container-wrapper"], "flex grow")}>
+    <div className={cn(styles["container-wrapper"], "flex grow p-5")}>
       <div
         className={cn(
           styles.container,
