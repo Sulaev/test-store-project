@@ -24,11 +24,32 @@ const products = [
     description: "Juicy citrus fruit",
     isFavorite: true,
   },
+  {
+    id: 4,
+    imageUrl: "/images/orange.jpg",
+    name: "Orange",
+    description: "Juicy citrus fruit",
+    isFavorite: true,
+  },
+  {
+    id: 5,
+    imageUrl: "/images/orange.jpg",
+    name: "Orange",
+    description: "Juicy citrus fruit",
+    isFavorite: true,
+  },
+  {
+    id: 6,
+    imageUrl: "/images/orange.jpg",
+    name: "Orange",
+    description: "Juicy citrus fruit",
+    isFavorite: true,
+  },
 ];
 
 export default function ProductList() {
   return (
-    <div className="product-grid">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
