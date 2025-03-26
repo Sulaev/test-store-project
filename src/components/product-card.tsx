@@ -1,6 +1,6 @@
 import { Card, CardContent } from "./ui/card";
 import { useState } from "react";
-import { Heart, HeartOff } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { Product } from "./types/productTypes";
 
@@ -35,6 +35,7 @@ export default function ProductCard({
             </div>
             <div>
               <Button
+                variant="ghost"
                 onClick={handleToggleFavorite}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -58,7 +59,13 @@ export default function ProductCard({
                   </div>
                 ) : (
                   <div className="flex gap-2 items-center">
-                    <HeartOff className="w-5 h-5 text-gray-400" />
+                    <Heart
+                      className={`w-5 h-5 ${
+                        isHovered
+                          ? "text-red-500 fill-red-500"
+                          : "text-gray-400 fill-gray-400"
+                      } transition-colors`}
+                    />
                     <p>Add to favorites?</p>
                   </div>
                 )}
