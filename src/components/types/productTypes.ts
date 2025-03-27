@@ -1,7 +1,7 @@
 export interface Product {
   id: number;
-  imageUrl: string;
-  name: string;
-  description: string;
+  title: string;
+  body: string;
   isFavorite: boolean;
+  imageUrl?: string;
 }
