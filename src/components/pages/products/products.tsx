@@ -1,5 +1,6 @@
 "use client";
 import ProductCard from "@/components/product-card";
+import { Button } from "@/components/ui/button";
 import { useProductsStore } from "@/store/useProductsStore";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -27,17 +28,17 @@ export default function ProductsPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Products</h1>
         <div className="flex items-center space-x-4">
-          <button
+          <Button
             onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
             className={`px-4 py-2 rounded-md ${
-              showOnlyFavorites ? "bg-blue-500 text-white" : "bg-gray-200"
+              showOnlyFavorites ? "bg-red-400 text-white" : "bg-gray-200"
             }`}
           >
             {showOnlyFavorites ? "Show All" : "Show Favorites"}
-          </button>
+          </Button>
           <Link
             href="/create-product"
-            className="px-4 py-2 bg-green-500 text-white rounded-md"
+            className="px-4 py-2 text-white rounded-md"
           >
             Create Product
           </Link>
